@@ -1,0 +1,11 @@
+.models{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    position: relative;
+}
+
+.imgModel {
+    width: 200px;
+    height: 250px;
+}
