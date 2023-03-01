@@ -77,7 +77,7 @@ class Items extends Component {
     let lstItemUIs = this.listGlasses.map((item) => {
       return (
         <button key={item.id} className="glass btn col-2" onClick={() => {
-          this.renderGlassTry(item.id);
+          this.handerTryGlass(item.id);
         }}>
           <img
             className="img-btn-glass"
@@ -90,7 +90,7 @@ class Items extends Component {
     return lstItemUIs;
   };
 
-  renderCard = () => {
+  showGlassOnModel = () => {
     if(this.state.isTry){
       return (
         <div className="card">
@@ -104,9 +104,8 @@ class Items extends Component {
     }
   };
 
-  renderGlassTry = (id) => {
+  handerTryGlass = (id) => {
     let item = this.listGlasses.find((item) => item.id === id);
-    console.log(item);
     if (item !== -1) {
       this.setState({
         isTry: true,
@@ -120,7 +119,7 @@ class Items extends Component {
   render() {
     return (
       <div className="items">
-        {this.renderCard()}
+        {this.showGlassOnModel()}
         <div className="listGlasses row">{this.renderListGlasses()}</div>
       </div>
     );
